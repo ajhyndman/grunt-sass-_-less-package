@@ -1,0 +1,64 @@
+/**
+ * Clearfix
+ */
+
+.clearfix() {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+
+
+/**
+ * Quick Grid
+ *
+ * Quickly generate a simple grid.
+ *
+ * Documentation: https://bitbucket.org/magicdust-development/cascade/wiki/Guides/Using%20the%20quickGrid%20mixin
+ */
+
+.moduleQuickGrid( @gutter, @columns, @s : 0, @columnsS : @columns, @m : @s, @columnsM : @columnsS, @l : @m, @columnsL : @columnsM, @xl : @l ) {
+	@gridClass: module-grid;
+	@columnClass: module-grid__column;
+
+	._quickGridMediaQueries( @current, @previous, @breakpoint ) when not ( @current = @previous ) {
+		@media ( min-width: @breakpoint ) {
+			width: ( 100% / @current );
+
+			@unclear: e( '@{previous}n+1' );
+			@clear: e( '@{current}n+1' );
+
+			&:nth-child(@{unclear}) {
+				clear: none;
+			}
+
+			&:nth-child(@{clear}) {
+				clear: left;
+			}
+		}
+	}
+
+	.@{gridClass} {
+		margin-left: ( -@gutter / 2 );
+		margin-right: ( -@gutter / 2 );
+	}
+
+	.@{columnClass} {
+		width: (100%/@columns);
+		padding-left: ( @gutter / 2 );
+		padding-right: ( @gutter / 2 );
+
+		@clear: e( '@{columns}n+1' );
+
+		&:nth-child(@{clear}) {
+			clear: left;
+		}
+
+		._quickGridMediaQueries( @columnsS; @columns; @s );
+		._quickGridMediaQueries( @columnsM; @columnsS; @m );
+		._quickGridMediaQueries( @columnsL; @columnsM; @l );
+	}
+}

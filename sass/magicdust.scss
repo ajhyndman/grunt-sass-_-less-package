@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+// #VARIABLES
+
+
+// #MIXINS
+
+
+
+
+
+/*------------------------------------*\
+    #IMPORTS
+\*------------------------------------*/
+
+@import "modules.scss";
+@import "grid.scss";
+
+
+
+
+
+//*------------------------------------*\
+    #SHARED
+\*------------------------------------*/
+
+a, input[type="submit"] {
+    -webkit-transition: 0.25s all;
+         -o-transition: 0.25s all;
+            transition: 0.25s all;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container--primary {
+    margin: auto;
+    max-width: 960px;
+    padding: 0 15px;
+}
+
+.phone,
+.email {
+    display: inline-block;
+}
+
+.phone::before,
+.email::before {
+    display: inline-block;
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.phone::before {
+    content: url(images/phone.png);
+}
+.email::before {
+    content: url(images/envelope.png);
+}
+
+
+
+
+
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+
+@media only screen and (max-width: 960px) {
+  /* HEADER */
+  #header {
+      text-align:  center;
+  }
+
+  #header-right {
+      display: block;
+      float: none;
+      width: auto;
+      padding: 0 15px;
+  }
+
+  #header-left {
+      background-position: center !important;
+      background-size: contain !important;
+      max-width: 90%;
+  }
+
+  #header-wrap {
+      padding: 15px 0;
+  }
+
+  #header,
+  #header-left,
+  #title a {
+      height: auto !important;
+  }
+
+  #title {
+      padding-top: 25% !important; /* TODO: SET THIS TO LOGO PROPORTIONS */
+      height: 0 !important;
+      position: relative;
+  }
+
+  #title a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100% !important;
+      width: 100% !important
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #NAVBAR
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+    #EZ Feature Top
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+    #CONTENT
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+    #SIDEBARS
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+    #FOOTER
+\*------------------------------------*/
+
+[id="footer"] ul li {
+    margin: 0;
+    list-style: none;
+}
+
+[id="footer"] .s {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    max-width: 100%;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #CLICKABLE PANELS
+\*------------------------------------*/
+
+.panels {
+    font-size: 0;
+    text-align: center;
+}
+
+    .panels__panel {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        display: inline-block;
+        font-size: 16px;
+        padding: 0 23px 10px;
+        vertical-align: top;
+    }
+
+    .panels__panel--3 {
+        width: 33%;
+
+    }
+
+    @media only screen and (max-width: 767px) {
+        .panels__panel--3 {
+            width: 100%;
+        }
+    }
+
+    .panels__panel--4 {
+        width: 25%;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .panels__panel--4 {
+            width: 50%;
+        }
+    }
+
+    @media only screen and (max-width: 479px) {
+        .panels__panel--4 {
+            width: 100%;
+        }
+    }
+
+
+
+
+
+/*------------------------------------*\
+    #SOCIAL ICONS
+\*------------------------------------*/
