@@ -1,6 +1,6 @@
 /*!
- * Magicdust Sass Gruntfile
- * http://magicdust.com.au
+ * styles Sass Gruntfile
+ * http://styles.com.au
  * @author Andrew Hyndman
  */
 
@@ -33,7 +33,7 @@ grunt.initConfig({
 		assets: '<%= project.app %>/',
 		src: '<%= project.assets %>/',
 		css: [
-			'<%= project.src %>/sass/magicdust.scss'
+			'<%= project.src %>/sass/styles.scss'
 		]
 	},
 
@@ -48,8 +48,8 @@ grunt.initConfig({
 				noCache: true
 			},
 			files: {
-				// '<%= project.assets %>/magicdust.css': '<%= project.css %>'
-				'magicdust.css': 'sass/magicdust.scss'
+				// '<%= project.assets %>/styles.css': '<%= project.css %>'
+				'styles.css': 'sass/styles.scss'
 			}
 			},
 			dist: {
@@ -59,7 +59,7 @@ grunt.initConfig({
 				noCache: true
 			},
 			files: {
-				// '<%= project.assets %>/css/magicdust.css': '<%= project.css %>'
+				// '<%= project.assets %>/css/styles.css': '<%= project.css %>'
 			}
 		}
 	},
@@ -75,8 +75,8 @@ grunt.initConfig({
 				noCache: true
 			},
 			files: {
-				// '<%= project.assets %>/magicdust.css': '<%= project.css %>'
-				'magicdust.css': 'less/magicdust.less'
+				// '<%= project.assets %>/styles.css': '<%= project.css %>'
+				'styles.css': 'less/styles.less'
 			}
 			},
 			dist: {
@@ -86,14 +86,14 @@ grunt.initConfig({
 				noCache: true
 			},
 			files: {
-				// '<%= project.assets %>/css/magicdust.css': '<%= project.css %>'
+				// '<%= project.assets %>/css/styles.css': '<%= project.css %>'
 			}
 		}
 	},
 
 	postcss: {
 		build: {
-			src: [ 'magicdust.css' ]
+			src: [ 'styles.css' ]
 		},
 		options: {
 			processors: [
